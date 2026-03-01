@@ -1,11 +1,13 @@
 import { glob } from "astro/loaders";
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { z } from "astro/zod";
 
 const commonFields = {
   title: z.string(),
   description: z.string(),
   meta_title: z.string().optional(),
-  date: z.date().optional(),
+  // z.coerce.date() handles both Date objects and ISO string dates from frontmatter (Zod 4)
+  date: z.coerce.date().optional(),
   image: z.string().optional(),
   draft: z.boolean(),
 };
@@ -17,11 +19,12 @@ const blogCollection = defineCollection({
     title: z.string(),
     meta_title: z.string().optional(),
     description: z.string().optional(),
-    date: z.date().optional(),
+    date: z.coerce.date().optional(),
     image: z.string().optional(),
     author: z.string().default("Admin"),
-    categories: z.array(z.string()).default(["others"]),
-    tags: z.array(z.string()).default(["others"]),
+    // Use factory functions for mutable array defaults (Zod 4 best practice)
+    categories: z.array(z.string()).default(() => ["others"]),
+    tags: z.array(z.string()).default(() => ["others"]),
     draft: z.boolean().optional(),
   }),
 });

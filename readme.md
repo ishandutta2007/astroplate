@@ -12,8 +12,8 @@
 </h2>
 
 <p align=center>
-  <a href="https://github.com/withastro/astro/releases/tag/astro%405.15.9">
-    <img src="https://img.shields.io/static/v1?label=ASTRO&message=5.15&color=000&logo=astro"  alt="Astro Version 5.15"/>
+  <a href="https://github.com/withastro/astro/releases/tag/astro%406.0.0-beta.17">
+    <img src="https://img.shields.io/static/v1?label=ASTRO&message=6.0%20beta&color=000&logo=astro"  alt="Astro Version 6.0 beta"/>
   </a>
 
   <a href="https://github.com/zeon-studio/astroplate/blob/main/LICENSE">
@@ -64,13 +64,14 @@
 - astro/react
 - astro/sitemap
 - astro/tailwind
+- Cloudflare Workers (optional deployment)
 
 ## 🚀 Getting Started
 
 ### 📦 Dependencies
 
-- astro v5.15+
-- node v20.10+
+- astro v6.0.0-beta+
+- node v22.12.0+ (see `.nvmrc`)
 - yarn v1.22+
 - tailwind v4+
 
@@ -90,6 +91,18 @@ yarn run dev
 
 ```bash
 yarn run build
+```
+
+### 👉 Preview on Cloudflare Workers
+
+```bash
+yarn run preview:cf-workers
+```
+
+### 👉 Deploy to Cloudflare Workers
+
+```bash
+yarn run deploy:cf-workers
 ```
 
 ### 👉 Build and Run With Docker
