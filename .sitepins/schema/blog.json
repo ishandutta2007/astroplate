@@ -1,5 +1,5 @@
 {
-  "file": "src/content/blog/post-2.md",
+  "file": "src/content/blog/post-1.md",
   "name": "blog",
   "fileType": "md",
   "fmType": "yaml",
@@ -9,64 +9,64 @@
       "label": "Title",
       "type": "string",
       "value": "",
-      "defaultValue": ""
+      "isRequired": true
     },
     {
       "name": "meta_title",
       "label": "Meta Title",
       "type": "string",
-      "value": "",
-      "defaultValue": ""
+      "value": ""
     },
     {
       "name": "description",
       "label": "Description",
       "type": "string",
-      "value": "",
-      "defaultValue": ""
+      "value": ""
     },
     {
       "name": "date",
       "label": "Date",
       "type": "Date",
       "value": "",
-      "defaultValue": "",
       "alwaysUseCurrentDate": false
     },
     {
       "name": "image",
       "label": "Image",
       "type": "media",
-      "value": "",
-      "defaultValue": ""
-    },
-    {
-      "name": "categories",
-      "label": "Categories",
-      "type": "Array",
-      "value": [],
-      "defaultValue": ""
+      "value": ""
     },
     {
       "name": "author",
       "label": "Author",
       "type": "string",
-      "value": "",
-      "defaultValue": ""
+      "value": "Admin",
+      "isDropdown": true,
+      "referenceType": "folder",
+      "referencePath": "src/content/authors",
+      "referenceInclude": "*.md",
+      "referenceExclude": "_*.md",
+      "referenceField": "title"
+    },
+    {
+      "name": "categories",
+      "label": "Categories",
+      "type": "Array",
+      "subType": "string",
+      "value": []
     },
     {
       "name": "tags",
       "label": "Tags",
       "type": "Array",
-      "value": [],
-      "defaultValue": ""
+      "subType": "string",
+      "value": []
     },
     {
       "name": "draft",
       "label": "Draft",
       "type": "boolean",
-      "value": false,
-      "defaultValue": ""
+      "value": false
     }
   ]
 }

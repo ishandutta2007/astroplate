@@ -5,53 +5,62 @@
   "fmType": "yaml",
   "template": [
     {
-      "label": "Title",
       "name": "title",
+      "label": "Title",
       "type": "string",
-      "value": ""
+      "value": "",
+      "isRequired": true
     },
     {
-      "label": "Email",
       "name": "email",
+      "label": "Email",
       "type": "string",
       "value": ""
     },
     {
-      "label": "Image",
       "name": "image",
+      "label": "Image",
       "type": "media",
       "value": ""
     },
     {
-      "label": "Description",
       "name": "description",
+      "label": "Description",
       "type": "string",
       "value": ""
     },
     {
-      "label": "Social",
       "name": "social",
+      "label": "Social Links",
       "type": "Array",
+      "subType": "object",
+      "value": [],
       "fields": [
         {
-          "label": "Name",
           "name": "name",
+          "label": "Name",
           "type": "string",
           "value": ""
         },
         {
-          "label": "Icon",
           "name": "icon",
+          "label": "Icon",
           "type": "string",
           "value": ""
         },
         {
-          "label": "Link",
           "name": "link",
+          "label": "Link",
           "type": "string",
           "value": ""
         }
       ]
+    },
+    {
+      "name": "draft",
+      "label": "Draft",
+      "type": "boolean",
+      "value": false
     }
   ]
 }
